@@ -1,0 +1,44 @@
+1) Levantramento de requisitos:
+	1.1. número máximo de peças do jogo e removidas por rodada;
+	1.2. implementar estratégia do computador (descrita no problema);
+	1.3. partida individual ou campeonato;
+	1.4. atualização da contagem de peças (o que foi removido e o que restou na partida);
+	1.5. quem começa;
+	1.6. quem ganha a partida;
+
+2) Algoritmo (sem codificação):
+	2.1. ENTRADA:
+		- partida individual ou campeonato;
+		- quantidade inicial de peças no tabuleiro;
+		- quantidade máxima de peças tiradas por rodada;
+		- quantas peças o jogador tira em sua rodada; 
+		
+	2.2. PROCESSAMENTO:
+		- definir se é partiida individual ou campeonato;
+		- verificar se n é múltiplo de (m + 1):
+			se for múltiplo, o joggador começa;
+			caso contrário, o computador começa;
+		- executar alternadamente funções usuário_escolhe_jogada e computador_escolhe_jogada até final da partida;
+				função usuário_escolhe_jogada:
+					-- enquanto peças em jogo é maior que zero, recebe peças removidas na rodada;
+					-- se peças removidas na jogada é maior ou igual a um  e é maior ou igual a m e peças removidas na rodada é menor do que peças em jogo, subtrair de peças no tabuleiro a quantidade de peças removidas na rodada; verificar se a quantidade removida de peças é maior ou igual a 1 para concordância nominal com "peça"; se a jogada não for válida, repetir a função "usuário_escolhe_jogada";
+				
+				função computador_escolhe_jogada:
+					-- enquanto peças em jogo é maior que zero, recebe peças removidas na rodada;
+					-- se n é divisível por (m+ 1), então a quantidade de peças tiradas na rodada  é [valor delimitado por nossa equação]; caso contrário, a quantidade de peças tiradas na rodada é igual ao número máximo perrmitieo de peças retiradas na rodada (m).
+					
+		- se o modo de jogo for campeonato, iniciar nova partida até totalizar três partidas; 
+		
+	2.3. SAÍDA:
+		- depois de receber a quantidade de peças iniciais e a quantidade máxima de peças retiradas por rodada, retornar estes valores;
+		- depois de receber a quantidade de peças retiradas por rodada e a quanrtidade de peças iniciais, retornar quem começa a partida;
+		- ao final de cada rodada, exibir o número de peças restantes no tabuleiro e o número de peças tiradas pelo jogador/computador;
+		- ao final de cada partida, exibir o vencedor da partida;
+		- ao final do campeonato, exibir que é final do campeonato;
+		- ao final do campeonato, exibir o placar do campeonato.
+
+3) Codificação;
+
+4) Teste;
+
+5) Implementação.

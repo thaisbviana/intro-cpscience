@@ -1,0 +1,19 @@
+alex lamark doliveira
+
+Olá ! Não estou entendendo a diferença entre os parâmetros as_b da função compara_assinatura(as_a ,as_b) e ass_cp da função avalia_textos(textos ,ass_cp) . Gostaria de saber se a minha interpretação está correta , ou errada . 
+
+Para mim ambos os parâmetros são a mesma coisa , ou seja : são o retorno da função le_assinatura() , que é uma lista com os traços linguísticos digitados pelo usuário . Não há sentido em se comparar os traços linguísticos dos diferentes textos digitados , mas é a assinatura do infectado por coh-piah que deverá ser comparada as assinaturas dos diferentes textos , o que é realizado pela função compara_assinatura(as_a ,as_b) . Nesta função as_a é a assinatura de um dos textos , e as_b é a assinatura do infectado .
+
+ Já à função avalia_textos(textos , ass_cp) , recebe duas listas como parâmetro, que são : lista de textos pelo parâmetro textos , e a assinatura do infectado pelo parâmetro ass_cp , ela deverá chamar à função calcula_assinatura(texto) , para calcular a assinatura , em seguida deverá chamar à função compara_assinatura(as_a ,as_b) para comparar assinaturas (2 por vez) enviando a assinatura do infectado (oriunda de le_assinatura())  , agora , pelo parâmetro as_b .
+
+Isto faz com que à lista de traços linguísticos retornada por le_assinatura() receba dois nomes diferentes ao longo do programa , que são : as_b , e ass_cp . Estou certo na minha interpretação ? 
+
+______________________________________________________________________________________________________________________________________________________
+
+Olá Alex,
+
+Você está correto. Só faço algumas ressalvas abaixo:
+
+Não é que a assinatura do texto infectado é comparado com a assinatura de referência dada de entrada no início do programa (pela função le_assinatura). Na verdade cada assinatura de cada texto inserido no programa deve ser comparada com a assinatura de referência, para que assim se possa definir qual é o texto infectado;
+
+Sobre a sua pergunta: "Isto faz com que à lista de traços linguísticos retornada por le_assinatura() receba dois nomes diferentes ao longo do programa , que são : as_b , e ass_cp . Estou certo na minha interpretação ?". Você não está errado, de fato a variável que contém a assinatura de referência acaba sendo referenciada com dois nomes diferentes durante o programa, que são as_b e ass_cp, em duas funções diferentes. No entanto, isso acontece nesse programa em si. Pensar em funções como um conceito mais abstrato e modular pode te ajudar em outras situações. Por exemplo, a função compara_assinatura compara duas assinaturas quaisquer as_a e as_b. No caso desse programa, as_b (ou as_a, a ordem não faz diferença) acaba sendo a assinatura de referência. No entanto, em uma situação hipotética você poderia utilizar essa mesma função em outro programa para comparar duas assinaturas, sem que uma delas fosse a assinatura de referência. Talvez, por exemplo, dada uma lista de textos, você quisesse encontrar o par de textos que é mais similar entre si, entende? Se você não entender exatamente não se assuste, isso não vai afetar o exercício do COH-PIAH. É mais uma dica de como absorver o conceito de funções como um pedaço de código modular que pode ser reutilizado em diversas situações e, quanto mais genérico ele for, mais adaptável ele será para utilização em diferentes domínios (talvez nem sempre isso aconteça, mas em geral a ideia é essa...).

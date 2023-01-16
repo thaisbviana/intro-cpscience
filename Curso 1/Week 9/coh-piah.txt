@@ -1,0 +1,12 @@
+1) ENTRADA:
+	1.1) ass_cp (seis parâmteros) = a assinatura de referência, recebida no início do programa;
+	1.2) textos a serem processados.
+
+2) PROCESSAMENTO:
+	2.1) 
+
+3) SAÍDA:
+	3.1) número do texto cuja assinatura é mais similar à assinatura de referência.
+	
+#A assinatura de referência é de um texto que se sabe que é cópia.
+#Os textos a serem analisados terão sua assinatura comparada à assinatura de referência com o objetivo de identificar qual texto tem maior similaridade com o texto que é cópia, isto é, de quem o texto de referência foi copiado.
